@@ -1,0 +1,23 @@
+.footer-container {
+    background-color: brown;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 2%;
+}
+
+.footer-caja{
+    list-style-type: none; 
+}
+
+.anchor-footer a  {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.copyR {
+    font-weight:bolder;
+}
