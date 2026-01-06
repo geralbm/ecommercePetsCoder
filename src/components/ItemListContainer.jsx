@@ -1,9 +1,11 @@
+
+import '../css/ItemListContainer.css'
 //Listado de productos del Ecommerce
 const ItemListContainer = ({saludo}) => {
     
     return (
-        <div>
-            <h2>{saludo}</h2>
+        <div className = 'saludo-bienvenida'>
+            <h3>{saludo}</h3>
         </div>
     )
 }

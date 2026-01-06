@@ -1,0 +1,7 @@
+.saludo-bienvenida {
+    color:brown;
+    font-weight: bolder;
+    margin:1rem;
+    display: flex;
+    justify-content: center;
+}
