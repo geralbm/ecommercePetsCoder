@@ -1,5 +1,5 @@
 .footer-container {
-    background-color: brown;
+    background-color: rgb(121, 64, 64);
     padding: 1rem;
     display: flex;
     justify-content: space-between;
@@ -20,4 +20,8 @@
 
 .copyR {
     font-weight:bolder;
+    display: flex;
+    justify-content: space-between;
+    color: aliceblue;
 }
+

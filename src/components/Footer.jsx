@@ -11,7 +11,8 @@ const Footer = () => {
             
 
             <div className='copyR'>
-                <p>2025 - Pets Love</p>
+                <span>©️ </span>
+                <p> 2025 - Pets Love</p>
             </div>
         </div>
     )
