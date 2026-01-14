@@ -4,8 +4,8 @@ const Footer = () => {
     return (
         <div className='footer-container'>
             <ul className = 'footer-caja'>
-                <li className = 'anchor-footer'><a href="#">CONTACTANOS</a></li>
-                <li className = 'anchor-footer'><a href="#">SUCURSALES</a></li>
+                <li className = 'anchor-footer'><a href="#">Contactanos</a></li>
+                <li className = 'anchor-footer'><a href="#">Sucursales</a></li>
             </ul>
 
             

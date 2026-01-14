@@ -1,7 +1,7 @@
 //Uso de Hook -  USE STATE REACT
 import { useState} from "react";
 import Badge from 'react-bootstrap/Badge';
-import Stack from 'react-bootstrap/Stack';
+
 
 
 //Declaracion de Hook

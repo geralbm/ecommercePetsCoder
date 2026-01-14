@@ -4,7 +4,7 @@ import ItemListContainer from './components/ItemListContainer'
 import NavbarBs from './components/NavbarBs'
 import Footer from './components/Footer'
 import CardHome from './components/CardHome'
-
+import TituloHome from './components/TituloHome'
 
 function App() {
 
@@ -12,6 +12,7 @@ function App() {
     <>
       <NavbarBs/>
       <ItemListContainer saludo = 'BIENVENIDOS AL MUNDO DE TUS MASCOTAS' />
+      <TituloHome />
       <CardHome/>
       <Footer/>
     </>

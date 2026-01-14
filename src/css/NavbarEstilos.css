@@ -1,0 +1,33 @@
+
+.navbar {
+    background-color: rgba(236, 211, 211, 0.753);
+
+}
+.contenedorHome img{
+    border-radius: 35%;
+    
+}
+
+h1 {
+    color:brown;
+    font-weight: bolder;
+}
+
+.me-auto {
+    font-weight: bolder; 
+}
+.me-auto .menu{
+    margin:0.5rem;
+}
+
+.sesionLink {
+    display: flex;
+    margin: 1rem;
+    justify-content: space-between;
+    text-decoration: underline;
+}
+
+.sesionLink .text-center {
+    margin: 0.5rem;
+}
+

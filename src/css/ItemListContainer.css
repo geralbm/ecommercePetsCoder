@@ -1,7 +1,9 @@
 .saludo-bienvenida {
-    color:brown;
+    color:white;
     font-weight: bolder;
     margin:1rem;
+     background-color: brown;
+     letter-spacing: 0.2em;
     display: flex;
     justify-content: center;
 }

@@ -6,7 +6,7 @@ const CartWidget = ()=> {
     return (
         <div>
             <PiShoppingCartFill fontSize={'1.5rem'} />
-            <Badge bg="primary">5</Badge>
+            <Badge bg="danger">5</Badge>
         </div>
     )
 }
