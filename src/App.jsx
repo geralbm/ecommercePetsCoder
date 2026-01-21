@@ -5,15 +5,16 @@ import NavbarBs from './components/NavbarBs'
 import Footer from './components/Footer'
 import CardHome from './components/CardHome'
 import TituloHome from './components/TituloHome'
+import SaludoBienvenida from './components/SaludoBienvenida'
 
 function App() {
 
   return (
     <>
       <NavbarBs/>
-      <ItemListContainer saludo = 'BIENVENIDOS AL MUNDO DE TUS MASCOTAS' />
+      <SaludoBienvenida saludo = 'BIENVENIDOS AL MUNDO DE TUS MASCOTAS' />
       <TituloHome />
-      <CardHome/>
+      <ItemListContainer/>
       <Footer/>
     </>
   )
