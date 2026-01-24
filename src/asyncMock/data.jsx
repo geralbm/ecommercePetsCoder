@@ -87,3 +87,18 @@ export const getProducts = () => {
         }, 2000);
     })
 }
+
+//Para obtener un producto
+export const getOneProduct = (id) => {
+    return new Promise ((resolve, reject) => {
+        setTimeout (()=>{
+            if (error) {
+                //rechazar la promesa
+                reject ('Se produjo un error al traer los productos');
+            }else {
+                let product = producto.find ((prod) => prod.id === id)
+                resolve (product)
+            }
+        }, 2000);
+    })
+}

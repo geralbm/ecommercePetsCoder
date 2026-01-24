@@ -6,6 +6,7 @@ import Footer from './components/Footer'
 import CardHome from './components/CardHome'
 import TituloHome from './components/TituloHome'
 import SaludoBienvenida from './components/SaludoBienvenida'
+import ItemDetailContainer from './components/ItemDetailContainer'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <SaludoBienvenida saludo = 'BIENVENIDOS AL MUNDO DE TUS MASCOTAS' />
       <TituloHome />
       <ItemListContainer/>
+      <ItemDetailContainer/>
       <Footer/>
     </>
   )
