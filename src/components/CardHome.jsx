@@ -5,14 +5,14 @@ import CardGroup from 'react-bootstrap/CardGroup';
 import ItemCount from './ItemCount';
 import Nav from 'react-bootstrap/Nav';
 import Badge from 'react-bootstrap/Badge';
-
+import { Link } from 'react-router-dom';
 
 const CardHome = ({producto})=> {
   console.log (producto);
   return (
 
       <CardGroup >
-      <Card  >
+      <Card style={{ width: '18rem', margin:'1rem', padding:'1rem'}} >
         <Card.Img variant="top" src={producto.img} alt="Card Home"/>
         <Card.Body>
           <Nav.Link href="#link" style={{color:'brown'}} className="text-center" ><strong>{producto.nombre}</strong></Nav.Link>
@@ -21,7 +21,11 @@ const CardHome = ({producto})=> {
         </Card.Body>
         <Card.Footer>
           <ItemCount stock={producto.stock}/>
-          <Button  className= 'd-block mx-auto' variant="danger"><strong>Agregar al Carrito</strong></Button>
+          <Link className='btn btn-danger' to={`/ItemDetail/${producto}`}>
+                <Button  className= 'd-block mx-auto' variant="danger"><strong>Agregar al Carrito</strong></Button>
+
+          </Link>
+
         </Card.Footer>
       </Card>
 

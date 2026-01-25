@@ -4,6 +4,7 @@ import Card from 'react-bootstrap/Card';
 import Nav from 'react-bootstrap/Nav';
 import CardGroup from 'react-bootstrap/CardGroup';
 import ItemCount from './ItemCount';
+import { Link } from 'react-router-dom';
 
 const ItemDetail = ({detail}) => {
     
@@ -11,22 +12,30 @@ const ItemDetail = ({detail}) => {
     <div>
         
       <CardGroup >
-      <Card  >
-        <Card.Img variant="top" src={detail.img} alt="Card Home"/>
-        <Card.Body>
-          <Nav.Link href="#link" style={{color:'brown'}} className="text-center" ><strong>{detail.nombre}</strong></Nav.Link>
+      <Card style={{ width: '40rem', margin:'1rem', padding:'1rem'}} >
+        <Card.Img  variant="top" src={detail.img} alt="Card Home"/>
+        <Card.Body >
+          <h6 style={{color:'brown' }} className="text-center" ><strong>{detail.nombre}</strong></h6>
           <h5 style={{color:'grey'}} className="text-center"><strong>${detail.precio}.00</strong></h5>
-          <p bg="success" className="text-center"> {detail.descripcion}</p>
+          <p style={{color:'grey'}} bg="success" className="text-center"><strong>{detail.descripcion}</strong> </p>
+          <p style={{color:'grey'}} bg="success" className="text-center"> <strong>Categoria:</strong> {detail.categoria}</p>
+          <p style={{color:'grey'}} bg="success" className="text-center"><strong>Acepta Transferencia: </strong> {detail.pagoTransferencia}</p>
+          <p style={{color:'grey'}} bg="success" className="text-center"><strong>Acepta Cuotas:</strong>  {detail.pargoCuotas}</p>
+          <p style={{color:'grey'}} bg="success" className="text-center"><strong>Envío Gratis:</strong>  {detail.envioGratis}</p>
+          <p style={{color:'grey'}} bg="success" className="text-center"><strong>Acepta Descuento:</strong>  {detail.descuento}</p>
+          <p style={{color:'grey'}} bg="success" className="text-center"><strong>Color:</strong> {detail.color}</p>
+          <p style={{color:'grey'}} bg="success" className="text-center"><strong>Tamaño:</strong>  {detail.tamaño}</p>
         </Card.Body>
-        <Card.Footer>
+        <Card.Footer style={{textAlign:'center'}} >
           <ItemCount stock={detail.stock}/>
-          <Button  className= 'd-block mx-auto' variant="danger"><strong>Comprar</strong></Button>
+          <Link className='btn btn-dark' to={`/ItemDetail/${detail.id}`}  variant="danger"><strong>Comprar</strong></Link>
         </Card.Footer>
       </Card>
-
-
     </CardGroup>
-
+    <div  style={{textAlign:'center'}}>
+       <Link  className='btn btn-danger' to='/'>Voler a Home</Link>
+    </div>
+    
     </div>
   )
 }

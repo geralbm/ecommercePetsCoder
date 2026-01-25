@@ -5,6 +5,8 @@
 import {getProducts} from '../asyncMock/data';
 import { useEffect, useState } from "react";
 import ItemList from './ItemList';
+import SaludoBienvenida from './SaludoBienvenida';
+import TituloHome from './TituloHome';
 
 //Listado de productos del Ecommerce
 const ItemListContainer = () => {
@@ -20,8 +22,10 @@ useEffect ( () => { // se ejecuta una vez y no se actualiza
 console.log (data);
 
     return (
-        <div>
-            <ItemList data = {data}/>
+        <div> 
+            <SaludoBienvenida saludo = 'BIENVENIDOS AL MUNDO DE TUS MASCOTAS'/>
+            <TituloHome/>
+             <ItemList data = {data}/>
         </div>
     )
 }

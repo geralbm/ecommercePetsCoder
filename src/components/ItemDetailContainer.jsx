@@ -11,7 +11,7 @@ const ItemDetailContainer = () => {
         .catch ((error) => console.log (error))
     }, [])
   return (
-    <div>
+    <div style={{display:'flex', justifyContent:'left', alignItems:'right', flexWrap:'wrap', padding:'1rem'}}>
         <ItemDetail detail = {detail}/>
     </div>
   )

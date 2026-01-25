@@ -11,7 +11,7 @@ return (
     <Navbar expand="lg" className="navBar ">
       <Container className='contenedorHome'>
         <Navbar.Brand href="#home" className='imgHome'>
-          <img src='./src/assets/images/logo.png' alt= 'Logo' style = {{width:'4rem'}}/>
+          <img src='https://i.postimg.cc/C18wnLMk/logo.png' alt= 'Logo' style = {{width:'4rem'}}/>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -21,10 +21,6 @@ return (
             <Nav.Link  className='menu' href="#link">MAS VENDIDOS</Nav.Link>
             <NavDropdown className='menu'  title="PRODUCTOS" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Perros</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Peces
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Gatos</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
                 Otros
