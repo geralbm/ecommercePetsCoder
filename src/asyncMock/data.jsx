@@ -84,7 +84,7 @@ export const getProducts = () => {
                 // Se devuelve el array de productos
                 resolve (producto);
             }
-        }, 2000);
+        }, 1000);
     })
 }
 
@@ -99,6 +99,6 @@ export const getOneProduct = (id) => {
                 let product = producto.find ((prod) => prod.id === id)
                 resolve (product)
             }
-        }, 2000);
+        }, 1000);
     })
 }

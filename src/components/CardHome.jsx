@@ -21,8 +21,8 @@ const CardHome = ({producto})=> {
         </Card.Body>
         <Card.Footer>
           <ItemCount stock={producto.stock}/>
-          <Link className='btn btn-danger' to={`/ItemDetail/${producto}`}>
-                <Button  className= 'd-block mx-auto' variant="danger"><strong>Agregar al Carrito</strong></Button>
+          <Link className='btn btn-danger' to={`/ItemDetail/${producto.id}`}>
+                <Button  className= 'd-block mx-auto' variant="danger"><strong>Agregar al Carrito</strong> </Button>
 
           </Link>
 
