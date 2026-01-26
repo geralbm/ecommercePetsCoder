@@ -17,14 +17,11 @@ return (
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto menu">
             <h1>PETS LOVE </h1>
-            <Nav.Link as={NavLink} className='menu' href="#home">OFERTAS</Nav.Link>
-            <Nav.Link  className='menu' href="#link">MAS VENDIDOS</Nav.Link>
+            <Nav.Link as={NavLink} className='menu' to='/'>HOME</Nav.Link>
+            <Nav.Link as={NavLink} className='menu' to='/category/mas vendidos'>MAS VENDIDOS</Nav.Link>
             <NavDropdown className='menu'  title="PRODUCTOS" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Perros</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink}to='/category/ofertas'>OERTAS</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Otros
-              </NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <div className="sesionLink">

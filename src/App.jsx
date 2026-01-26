@@ -17,8 +17,12 @@ function App() {
 
       <Routes>
 
-        <Route path = '/' element= {<ItemListContainer/>}></Route>
+        <Route path = '/' element= {<ItemListContainer saludo = 'BIENVENIDOS AL MUNDO DE TUS MASCOTAS'/>}></Route>
+
+        <Route path = '/category/:type' element= {<ItemListContainer saludo = 'ESTAS EN LA CETEGORIA: '/>}></Route>
+
         <Route path='/itemDetail/:id' element={<ItemDetailContainer/>}></Route>
+
         <Route path='*' element={<Error/>}></Route>
       </Routes>
       
