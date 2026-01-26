@@ -5,9 +5,7 @@ import ItemDetail from './ItemDetail'
 
 const ItemDetailContainer = () => {
     const [detail, setDetail] = useState ({})
-  //constante para ver que trea el hook useParams
-    // const param = useParams ()
-    // console.log (param)
+
 
     //Destructuring
     const {id} = useParams()
