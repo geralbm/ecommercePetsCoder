@@ -6,6 +6,7 @@ import Footer from './components/Footer'
 import ItemDetailContainer from './components/ItemDetailContainer'
 import Error from './components/Error'
 
+
 //Componentes para navegacion:
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
@@ -18,7 +19,7 @@ function App() {
       <Routes>
 
         <Route path = '/' element= {<ItemListContainer saludo = 'BIENVENIDOS AL MUNDO DE TUS MASCOTAS'/>}></Route>
-
+        
         <Route path = '/category/:type' element= {<ItemListContainer saludo = 'ESTAS EN LA CETEGORIA: '/>}></Route>
 
         <Route path='/itemDetail/:id' element={<ItemDetailContainer/>}></Route>

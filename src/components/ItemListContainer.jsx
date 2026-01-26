@@ -5,7 +5,7 @@ import '../css/SaludoBienvenida.css'
 import {getProducts} from '../asyncMock/data';
 import { useEffect, useState } from "react";
 import ItemList from './ItemList';
-import TituloHome from './TituloHome';
+
 import { useParams } from 'react-router-dom';
 
 
@@ -37,7 +37,7 @@ console.log (data);
                 <h3>{saludo} {type && <span style={{textTransform:'capitalize'}}>{type}</span>}</h3>
             </div>
 
-            <TituloHome/>
+            
              <ItemList data = {data}/>
         </div>
     )
