@@ -25,8 +25,8 @@ return (
             </NavDropdown>
           </Nav>
           <div className="sesionLink">
-            <Nav.Link href="#link" style={{color:'brown'}} className="text-center">Crear Cuenta</Nav.Link>
-            <Nav.Link href="#link" style={{color:'brown'}} className="text-center">Iniciar Sesión</Nav.Link>
+            <Nav.Link as={NavLink} to='/crearcuenta/'style={{color:'brown'}} className="text-center">Crear Cuenta</Nav.Link>
+            <Nav.Link as={NavLink} to='/iniciosesion/' style={{color:'brown'}} className="text-center">Iniciar Sesión</Nav.Link>
           </div>
 
         </Navbar.Collapse>
