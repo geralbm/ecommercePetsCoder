@@ -27,15 +27,15 @@ function App() {
 
         <Route path = '/' element= {<ItemListContainer saludo = 'BIENVENIDOS AL MUNDO DE TUS MASCOTAS'/>}></Route>
         
-        <Route path = '/category/:type' element= {<ItemListContainer saludo = 'ESTAS EN LA CETEGORIA: '/>}></Route>
+        <Route path = '/category/:type' element= {<ItemListContainer saludo = 'ESTAS EN LA CATEGORIA: '/>}></Route>
 
-        <Route path = '/iniciosesion/' element={<IniciarSesion/>}></Route>
+        <Route path = '/iniciosesion' element={<IniciarSesion/>}></Route>
 
-        <Route path='/crearcuenta/' element={<CrearCuenta/>}></Route>
+        <Route path='/crearcuenta' element={<CrearCuenta/>}></Route>
 
-        <Route path='/contactanos/' element={<Contactenos/>}></Route>
+        <Route path='/contactanos' element={<Contactenos/>}></Route>
 
-        <Route path='/sucursales/' element={<Sucursales/>}></Route>
+        <Route path='/sucursales' element={<Sucursales/>}></Route>
 
         <Route path='/itemDetail/:id' element={<ItemDetailContainer/>}></Route>
 

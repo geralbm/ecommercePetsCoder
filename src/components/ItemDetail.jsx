@@ -13,9 +13,9 @@ const ItemDetail = ({detail}) => {
         
       <CardGroup >
       <Card style={{ width: '40rem', margin:'1rem', padding:'1rem'}} >
-        <Card.Img  variant="top" src={detail.img} alt="Card Home"/>
-        <Card.Body >
-          <h6 style={{color:'brown' }} className="text-center" ><strong>{detail.nombre}</strong></h6>
+        <Card.Img  style={{width:'250px'}} variant="top" src={detail.img} alt="Card Home"  className="mx-auto d-block" />
+        <Card.Body >  
+          <h4 style={{color:'brown' }} className="text-center" ><strong>{detail.nombre}</strong></h4>
           <h5 style={{color:'grey'}} className="text-center"><strong>${detail.precio}.00</strong></h5>
           <p style={{color:'grey'}} bg="success" className="text-center"><strong>{detail.descripcion}</strong> </p>
           <p style={{color:'grey'}} bg="success" className="text-center"> <strong>Categoria:</strong> {detail.categoria}</p>
@@ -28,12 +28,12 @@ const ItemDetail = ({detail}) => {
         </Card.Body>
         <Card.Footer style={{textAlign:'center'}} >
           <ItemCount stock={detail.stock}/>
-          <Link className='btn btn-dark' to={`/ItemDetail/${detail.id}`}  variant="danger"><strong>Comprar</strong></Link>
+          <Link className='btn btn-danger' to={`/ItemDetail/${detail.id}`}  variant="danger"><strong>Comprar</strong></Link>
         </Card.Footer>
       </Card>
     </CardGroup>
     <div  style={{textAlign:'center'}}>
-       <Link  className='btn btn-danger' to='/'>Voler a Home</Link>
+       <Link  className='btn btn-dark ' style={{fontWeight:'bolder'}} to='/'>Voler a Home</Link>
     </div>
     
     </div>

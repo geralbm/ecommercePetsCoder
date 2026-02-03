@@ -1,11 +1,13 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import {Link} from 'react-router-dom';
 
 const IniciarSesion = () => {
   return (
-    <div>
-        <Form style={{padding:'2rem'}}>
+    <div 
+    >
+        <Form style={{padding:'2rem', width:'40rem'}}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label style={{fontWeight:'bolder', letterSpacing:'2px'}}>USUARIO</Form.Label>
         <Form.Control style={{fontSize:'13px',fontStyle: 'italic'}}type="email" placeholder="Ingresar el email." />
@@ -25,8 +27,14 @@ const IniciarSesion = () => {
         <Button style={{backgroundColor:'brown', borderColor:'brown',fontWeight:'bolder',letterSpacing:'2px',fontSize:'12px'}}variant="primary" type="submit">
          Recuperar Cuenta
       </Button>
+
     </Form>
+
+    <div  style={{textAlign:'center'}}>
+       <Link  style={{fontWeight:'bolder'}}className='btn btn-dark' to='/'>Voler a Home</Link>
     </div>
+
+  </div>
   )
 }
 

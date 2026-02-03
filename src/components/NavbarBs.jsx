@@ -20,7 +20,7 @@ return (
             <Nav.Link as={NavLink} className='menu' to='/'>HOME</Nav.Link>
             <Nav.Link as={NavLink} className='menu' to='/category/mas vendidos'>MAS VENDIDOS</Nav.Link>
             <NavDropdown className='menu'  title="PRODUCTOS" id="basic-nav-dropdown">
-              <NavDropdown.Item as={NavLink}to='/category/ofertas'>OERTAS</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink}to='/category/ofertas'>OFERTAS</NavDropdown.Item>
               <NavDropdown.Divider />
             </NavDropdown>
           </Nav>
