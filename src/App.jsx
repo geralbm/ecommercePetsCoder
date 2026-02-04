@@ -10,7 +10,8 @@ import CrearCuenta from './components/CrearCuenta'
 import Contactenos from './components/Contactenos'
 //Componentes para navegacion:
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import Sucursales from './components/Sucursales'
+import RecuperarCuenta from './components/RecuperarCuenta'
+
 
 
 
@@ -31,11 +32,11 @@ function App() {
 
         <Route path = '/iniciosesion' element={<IniciarSesion/>}></Route>
 
+        <Route path = '/recuperarCuenta' element={<RecuperarCuenta/>}></Route>
+
         <Route path='/crearcuenta' element={<CrearCuenta/>}></Route>
 
         <Route path='/contactanos' element={<Contactenos/>}></Route>
-
-        <Route path='/sucursales' element={<Sucursales/>}></Route>
 
         <Route path='/itemDetail/:id' element={<ItemDetailContainer/>}></Route>
 

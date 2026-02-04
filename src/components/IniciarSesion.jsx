@@ -2,12 +2,16 @@ import React from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import {Link} from 'react-router-dom';
-
+import Badge from 'react-bootstrap/Badge';
 const IniciarSesion = () => {
   return (
-    <div 
-    >
-        <Form style={{padding:'2rem', width:'40rem'}}>
+    <div>
+    
+        <Form style={{padding:'1rem', width:'40rem'}}>
+        <h4 >
+            <Badge bg="danger" style={{letterSpacing:'3px'}}>INICIAR SESION</Badge>
+        </h4>
+          
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label style={{fontWeight:'bolder', letterSpacing:'2px'}}>USUARIO</Form.Label>
         <Form.Control style={{fontSize:'13px',fontStyle: 'italic'}}type="email" placeholder="Ingresar el email." />
@@ -21,12 +25,14 @@ const IniciarSesion = () => {
         <Form.Control style={{fontSize:'13px',fontStyle: 'italic'}} type="password" placeholder="Ingresar su contraseña." />
       </Form.Group>
 
-      <Button style={{margin:'1rem', backgroundColor:'brown', borderColor:'brown', fontWeight:'bolder', letterSpacing:'2px', fontSize:'12px'}} variant="primary" type="submit">
-        Iniciar Sesión
-      </Button>
-        <Button style={{backgroundColor:'brown', borderColor:'brown',fontWeight:'bolder',letterSpacing:'2px',fontSize:'12px'}}variant="primary" type="submit">
-         Recuperar Cuenta
-      </Button>
+      <div  >
+        <Button style={{margin:'1rem', backgroundColor:'brown', borderColor:'brown', fontWeight:'bolder', letterSpacing:'2px', fontSize:'12px'}} variant="primary" type="submit">
+          Aceptar
+        </Button>
+
+        <Link  style={{fontWeight:'bolder', backgroundColor:'brown',letterSpacing:'2px',fontSize:'12px'}}className='btn btn-danger' to='/recuperarCuenta'>Recuperar Cuenta</Link>
+        </div>
+
 
     </Form>
 

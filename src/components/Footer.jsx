@@ -6,8 +6,7 @@ const Footer = () => {
         <div className='footer-container'>
             <ul className = 'footer-caja'>
                 <li className = 'anchor-footer'><NavLink to='/contactanos'>Contactanos</NavLink></li>
-
-                <li className = 'anchor-footer'><NavLink to='sucursales'>Sucursales</NavLink></li>
+               
             </ul>
 
             

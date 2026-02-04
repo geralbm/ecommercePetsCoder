@@ -2,12 +2,16 @@ import React from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
+import Badge from 'react-bootstrap/Badge';
 
 const Contactenos = () => {
   return (
    
     <div>
-     <Form style={{padding:'2rem', width:'40rem'}}> 
+     <Form style={{padding:'1rem', width:'40rem'}}> 
+              <h4 >
+            <Badge bg="danger" style={{letterSpacing:'3px'}}>CONTACTENOS</Badge>
+        </h4>
 
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label style={{fontWeight:'bolder', letterSpacing:'2px'}}>NOMBRE</Form.Label>
