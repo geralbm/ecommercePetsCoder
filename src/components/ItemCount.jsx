@@ -1,11 +1,12 @@
 //Uso de Hook -  USE STATE REACT
 import { useState} from "react";
 import Badge from 'react-bootstrap/Badge';
+import Button from 'react-bootstrap/Button';
 
 
 
 //Declaracion de Hook
-const ItemCount = ({stock}) => {
+const ItemCount = ({stock,onAdd}) => {
     const [counter, setCounter] = useState(0)
     
     
@@ -22,14 +23,20 @@ const ItemCount = ({stock}) => {
             setCounter(counter - 1)
         }
     }
-    
+
+ const comprar = ()=> {
+    onAdd(counter)
+ }
     return (
         <div className="w-50 mx-auto bg-light p-3 d-flex justify-content-center align-items-center">
             <Badge bg="danger"  onClick={restar}>-</Badge>
             <Badge bg="secondary">{counter}</Badge>
             <Badge bg="success" onClick={sumar}>+</Badge>
-            
+            <Button  className= 'd-block mx-auto' variant="danger" onClick={comprar} disabled={counter === 0 || stock === 0 }><strong>Comprar</strong> 
+            </Button>
         </div>
+        
+        
     )
 }
 export default ItemCount;

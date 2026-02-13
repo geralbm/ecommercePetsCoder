@@ -1,9 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import {Link} from 'react-router-dom';
 import Badge from 'react-bootstrap/Badge';
+
+
 const IniciarSesion = () => {
+  const [usuario, setUsuario] = useState('')
+
+  //Funcion para esuchar el evento del formulario
+  // => la funcion recive el evento y este evento puede ser por partes.
+
+  const usuarioHandler = (e) => {
+    //console.log (e, 'evento')
+    //console.log (e.target, 'el evento target en el input')
+   // console.log (e.target.value, 'el valor en si del evento')
+
+    //Capturar el eventoy guardarlo en un estado => se guarda en usuario
+    setUsuario (e.target.value)
+  }
   return (
     <div>
     
@@ -14,7 +29,8 @@ const IniciarSesion = () => {
           
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label style={{fontWeight:'bolder', letterSpacing:'2px'}}>USUARIO</Form.Label>
-        <Form.Control style={{fontSize:'13px',fontStyle: 'italic'}}type="email" placeholder="Ingresar el email." />
+        <Form.Control style={{fontSize:'13px',fontStyle: 'italic'}}type="email" placeholder="Ingresar el email."  onChange={usuarioHandler}/>
+        
         <Form.Text style={{fontStyle: 'italic', fontSize:'12px',fontWeight:'bolder'}}className="text-muted">
           Nunca compartiremos tu correo electrónico.
         </Form.Text>

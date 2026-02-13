@@ -7,7 +7,11 @@ import ItemCount from './ItemCount';
 import { Link } from 'react-router-dom';
 
 const ItemDetail = ({detail}) => {
-    
+    const onAdd = (cantidad) => {
+      console.log(`Agregaste ${cantidad} unidades del producto ${detail.nombre}`)
+    }
+
+
   return (
     <div>
         
@@ -27,8 +31,7 @@ const ItemDetail = ({detail}) => {
           <p style={{color:'grey'}} bg="success" className="text-center"><strong>Tamaño:</strong>  {detail.tamaño}</p>
         </Card.Body>
         <Card.Footer style={{textAlign:'center'}} >
-          <ItemCount stock={detail.stock}/>
-          <Link className='btn btn-danger' to={`/ItemDetail/${detail.id}`}  variant="danger"><strong>Comprar</strong></Link>
+          <ItemCount stock={detail.stock} onAdd={onAdd}/>
         </Card.Footer>
       </Card>
     </CardGroup>

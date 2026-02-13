@@ -5,7 +5,7 @@ const producto = [
         id:'01',
         nombre:'CAMA MOISES ARTESANAL',
         descripcion:'CAMA MOISES ARTESANAL - PARA PERROS & GATOS - VARIOS TAMAÑOS',
-        stock:'50',
+        stock:'0',
         categoria:'ofertas',
         img:'https://i.postimg.cc/wTQC7cfV/Card-Home1.jpg',
         precio:120000,

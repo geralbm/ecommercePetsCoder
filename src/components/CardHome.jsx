@@ -20,10 +20,10 @@ const CardHome = ({producto})=> {
           <p bg="success" className="text-center"> {producto.descripcion}<Badge bg="success">Nuevo</Badge></p>
         </Card.Body>
         <Card.Footer>
-          <ItemCount stock={producto.stock}/>
+        
           <Link  className="d-flex justify-content-center btn btn-danger" to={`/ItemDetail/${producto.id}`}>
-                <Button  className= 'd-block mx-auto' variant="danger"><strong>Agregar al Carrito</strong> </Button>
-
+                <Button  className= 'd-block mx-auto' variant="danger"><strong>Ver Más</strong> 
+                </Button>
           </Link>
 
         </Card.Footer>
