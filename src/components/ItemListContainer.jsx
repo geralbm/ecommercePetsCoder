@@ -5,17 +5,20 @@ import '../css/SaludoBienvenida.css'
 import {getProducts} from '../asyncMock/data';
 import { useEffect, useState } from "react";
 import ItemList from './ItemList';
-
 import { useParams } from 'react-router-dom';
+import Loader from './Loader';
 
 
 //Listado de productos del Ecommerce
 const ItemListContainer = ({saludo}) => {
 const [data,setData] = useState ([])
+const [loading, setLoading] = useState(false)
 const {type} = useParams ()
 console.log ('Tipo:', type)
 
 useEffect ( () => { // se ejecuta una vez y no se actualiza
+    //Prender el loading
+    setLoading(true)
     //pedir datos 
     getProducts() // retorna una promesa
     .then ((res) => {
@@ -27,19 +30,26 @@ useEffect ( () => { // se ejecuta una vez y no se actualiza
         }
     })//tratando la promesa y guardando las res en un estado que tiene un array vacio.
     .catch ((error) => console.log (error))
+    //Finalizar el loading
+    .finally (() => setLoading(false))
 },[type])
 
 console.log (data);
 
-    return (
-        <div> 
+   return (
+    <>
+    {
+        loading
+        ? <Loader/>
+        : <div> 
             <div className = 'saludo-bienvenida'>
                 <h3>{saludo} {type && <span style={{textTransform:'capitalize'}}>{type}</span>}</h3>
             </div>
 
-            
              <ItemList data = {data}/>
         </div>
-    )
+    }
+    </>
+   )
 }
 export default ItemListContainer

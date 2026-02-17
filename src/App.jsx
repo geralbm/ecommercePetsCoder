@@ -11,19 +11,17 @@ import Contactenos from './components/Contactenos'
 //Componentes para navegacion:
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import RecuperarCuenta from './components/RecuperarCuenta'
-
-
-
-
-
-
+//Importar al Proveedor del contexto
+import { CartProvider } from './context/CartContext';
 
 function App() {
 
   return (
     <BrowserRouter>
-      <NavbarBs/>
+      
 
+    <CartProvider>
+      <NavbarBs/>
       <Routes>
 
         <Route path = '/' element= {<ItemListContainer saludo = 'BIENVENIDOS AL MUNDO DE TUS MASCOTAS'/>}></Route>
@@ -40,13 +38,11 @@ function App() {
 
         <Route path='/itemDetail/:id' element={<ItemDetailContainer/>}></Route>
 
-
-
         <Route path='*' element={<Error/>}></Route>
+
       </Routes>
-      
-      
-      
+
+  </CartProvider>   
 
       <Footer/>
     </BrowserRouter>

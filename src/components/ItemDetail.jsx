@@ -1,4 +1,5 @@
-import React from 'react'
+import {useContext} from 'react';
+import { CartContex } from '../context/CartContext';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Nav from 'react-bootstrap/Nav';
@@ -6,9 +7,14 @@ import CardGroup from 'react-bootstrap/CardGroup';
 import ItemCount from './ItemCount';
 import { Link } from 'react-router-dom';
 
+
 const ItemDetail = ({detail}) => {
+
+   const {addItem, cart} = useContext (CartContex)
+    console.log (cart, 'cart')
     const onAdd = (cantidad) => {
       console.log(`Agregaste ${cantidad} unidades del producto ${detail.nombre}`)
+      addItem (detail, cantidad)
     }
 
 
