@@ -25,7 +25,7 @@ const ItemDetailContainer = () => {
     < >
        {
         cargando
-        ? <Loader/> 
+        ? <Loader text= ' Cargando detalle...'/> 
         : <div style={{display:'flex', justifyContent:'justify', alignItems:'center', flexWrap:'wrap', padding:'2rem'}}>
             <ItemDetail  detail ={detail}/> 
           </div>

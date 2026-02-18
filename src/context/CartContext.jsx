@@ -59,7 +59,7 @@ const [cart, setCart] = useState([])
         }
 
     return (
-        <CartContex.Provider value={{cart, addItem, removeItem, total, cartQuantity}}>
+        <CartContex.Provider value={{cart, addItem, removeItem, total, cartQuantity, clear}}>
             {children}
         </CartContex.Provider>
     )

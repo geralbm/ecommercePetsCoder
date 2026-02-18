@@ -13,6 +13,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import RecuperarCuenta from './components/RecuperarCuenta'
 //Importar al Proveedor del contexto
 import { CartProvider } from './context/CartContext';
+import CartContainer from './components/CartContainer'
 
 function App() {
 
@@ -38,8 +39,10 @@ function App() {
 
         <Route path='/itemDetail/:id' element={<ItemDetailContainer/>}></Route>
 
-        <Route path='*' element={<Error/>}></Route>
+        <Route path='/cart' element={<CartContainer/>}></Route>
 
+        <Route path='*' element={<Error/>}></Route>
+        
       </Routes>
 
   </CartProvider>   

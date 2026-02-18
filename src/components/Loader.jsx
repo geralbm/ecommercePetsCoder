@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Spinner from 'react-bootstrap/Spinner';
 
 
-const Loader = () => {
+const Loader = ({text}) => {
   return (
     
     <div style={{with:'100%', height:'85vh', display:'flex', justifyContent:'center', alignItems:'center', flexDirection:'column'}}>
@@ -15,7 +15,7 @@ const Loader = () => {
           role="status"
           aria-hidden="true"
         />
-        Loading...
+          {text}
       </Button>
     </div>
     

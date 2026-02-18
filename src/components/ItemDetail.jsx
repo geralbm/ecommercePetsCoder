@@ -1,4 +1,4 @@
-import {useContext} from 'react';
+import {useContext, useState} from 'react';
 import { CartContex } from '../context/CartContext';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
@@ -9,20 +9,21 @@ import { Link } from 'react-router-dom';
 
 
 const ItemDetail = ({detail}) => {
-
+   const [purchase, setPurchase] = useState (false)
    const {addItem, cart} = useContext (CartContex)
     console.log (cart, 'cart')
     const onAdd = (cantidad) => {
       console.log(`Agregaste ${cantidad} unidades del producto ${detail.nombre}`)
       addItem (detail, cantidad)
+      setPurchase (true)
     }
 
 
   return (
-    <div>
+    <div >
         
       <CardGroup >
-      <Card style={{ width: '40rem', margin:'1rem', padding:'1rem'}} >
+      <Card  style={{ width: '40rem', margin:'1rem', padding:'1rem'}} >
         <Card.Img  style={{width:'250px'}} variant="top" src={detail.img} alt="Card Home"  className="mx-auto d-block" />
         <Card.Body >  
           <h4 style={{color:'brown' }} className="text-center" ><strong>{detail.nombre}</strong></h4>
@@ -37,7 +38,7 @@ const ItemDetail = ({detail}) => {
           <p style={{color:'grey'}} bg="success" className="text-center"><strong>Tamaño:</strong>  {detail.tamaño}</p>
         </Card.Body>
         <Card.Footer style={{textAlign:'center'}} >
-          <ItemCount stock={detail.stock} onAdd={onAdd}/>
+         {purchase ? <Link className='btn btn-danger' to='/cart'>Continuar compra</Link> : <ItemCount stock={detail.stock} onAdd={onAdd}/>}
         </Card.Footer>
       </Card>
     </CardGroup>

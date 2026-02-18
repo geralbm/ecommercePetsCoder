@@ -40,7 +40,7 @@ console.log (data);
     <>
     {
         loading
-        ? <Loader/>
+        ? <Loader text={type ? 'Cargando categoría...' : 'Cargando productos...'}/>
         : <div> 
             <div className = 'saludo-bienvenida'>
                 <h3>{saludo} {type && <span style={{textTransform:'capitalize'}}>{type}</span>}</h3>
