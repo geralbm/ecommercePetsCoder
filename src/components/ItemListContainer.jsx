@@ -7,6 +7,8 @@ import { useEffect, useState } from "react";
 import ItemList from './ItemList';
 import { useParams } from 'react-router-dom';
 import Loader from './Loader';
+import { collection, getDocs, query, where } from 'firebase/firestore';
+import { db } from '../service/firebase';
 
 
 //Listado de productos del Ecommerce
@@ -16,25 +18,56 @@ const [loading, setLoading] = useState(false)
 const {type} = useParams ()
 console.log ('Tipo:', type)
 
+//Con Firebase
 useEffect ( () => { // se ejecuta una vez y no se actualiza
     //Prender el loading
     setLoading(true)
-    //pedir datos 
-    getProducts() // retorna una promesa
+    //1.Conectarse a la coleccion
+    const prodCollection = type ? query(collection(db,"productos"), where("categoria", "==", type)) :collection(db,"productos")
+    //2. Pedir los documentos
+    getDocs(prodCollection)
     .then ((res) => {
-        if (type){
-            //filtrar
-            setData (res.filter((prod)=>prod.categoria === type))
-        }else{
-            setData(res) //No filtro, entonces se trabaja la promesa.
-        }
-    })//tratando la promesa y guardando las res en un estado que tiene un array vacio.
+        console.log (res)
+       //console.log (res.docs)
+        //Limpiar y ordenar los datos
+        const list = res.docs.map((doc)=>{
+            return {
+                id:doc.id,
+                //Acceder a los datos 
+                ...doc.data()
+            }
+        })
+        console.log (list)
+        setData (list)
+
+    })
     .catch ((error) => console.log (error))
     //Finalizar el loading
     .finally (() => setLoading(false))
+    //escucha los tipos de categoria (type)
 },[type])
 
-console.log (data);
+
+//Promesa
+// useEffect ( () => { // se ejecuta una vez y no se actualiza
+//     //Prender el loading
+//     setLoading(true)
+//     //pedir datos 
+//     getProducts() // retorna una promesa
+//     .then ((res) => {
+//         if (type){
+//             //filtrar
+//             setData (res.filter((prod)=>prod.categoria === type))
+//         }else{
+//             setData(res) //No filtro, entonces se trabaja la promesa.
+//         }
+//     })//tratando la promesa y guardando las res en un estado que tiene un array vacio.
+//     .catch ((error) => console.log (error))
+//     //Finalizar el loading
+//     .finally (() => setLoading(false))
+// },[type])
+
+//console.log (data);
 
    return (
     <>

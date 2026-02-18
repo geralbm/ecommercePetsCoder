@@ -49,13 +49,13 @@ const [cart, setCart] = useState([])
 
         //Pagar el total
         const total = () => {
-
+            return cart.reduce ((acu, prod)=>acu += (prod.quantity * prod.precio),0)
         }
 
 
         //Sumar cantidades
         const cartQuantity = () => {
-
+            return cart.reduce ((acu,prod) => acu += (prod.quantity),0)
         }
 
     return (

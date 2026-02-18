@@ -30,7 +30,10 @@ return (
           </div>
 
         </Navbar.Collapse>
-        <CartWigdet/> 
+        <NavLink to='/cart' style={{color:'black'}}>
+            <CartWigdet/>
+        </NavLink>
+       
       </Container>
       
     </Navbar>
