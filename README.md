@@ -1,16 +1,30 @@
-# React + Vite
+# PETS ECOMMERCE 🛒
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Proyecto Web llamado PETS LOVE**
 
-Currently, two official plugins are available:
+- *Este proyecto se realizo para poder aprender Vite React de la mano de JavaScprit. Para ello se desarrolló un Ecommerce de Mascotas.*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[app](https://i.postimg.cc/MpqHNWKn/Imagen-Proyecto-Readme.jpg)
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Instalacion ⚙️
 
-## Expanding the ESLint configuration
+1. Clonar el repositorio.
+2. Ir a la carpeta creada con el comando `PETS-ECOMMERCE`
+3. Ejecutar el comando `npm install`, para instalar dependencias y crear la carpeta node_modules.
+4. Ejecutar el comando `npm run dev`, para poder levantar la aplicación de forma local.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+>Es necesario contar con la versión de Node v22.17.0 instalado.
+
+
+### Versión Host 💻
+
+Si desea ver el proyecto online, se puede realizar ingresando al siguiente link: [app Publicada]()
+
+### Librerias Utilizadas
+-[React Boostrap](https://react-bootstrap.netlify.app/): Para el styaling de la app.
+-[React Icons](https://react-icons.github.io/react-icons/): Aplicación de Icónos en la app.
+-[Firebase](https://console.firebase.google.com/): Utilizada para Base de datos.
+-[React Router Dom](https://reactrouter.com/): Para realizar la navegación por rutas.
+
+*Desarrollado por: Geraldina Barrios.*
