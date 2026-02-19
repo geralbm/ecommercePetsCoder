@@ -29,7 +29,9 @@ const CartView = () => {
 
         <div style={{padding:'1rem'}}>
             <button className='btn btn-danger' style={{margin:'1rem'}} onClick={clear}>Vaciar Carrito</button>
-            <button className='btn btn-success' style={{margin:'1rem'}}>Terminar Compra</button>
+
+            <Link  style={{margin:'1rem'}}className='btn btn-success' to='/checkout'>Terminar Compra</Link>
+           
         </div>
 
       <div  style={{textAlign:'center'}}>

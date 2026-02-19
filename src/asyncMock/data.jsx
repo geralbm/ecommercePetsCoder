@@ -1,6 +1,7 @@
 //Array de productos - simulacion de base de datos: Manejo una Asyncronia.
 
 const producto = [
+    //Firebase NO cargar el ID => poner que se genere automatico.
     {
         id:'01',
         nombre:'CAMA MOISES ARTESANAL',

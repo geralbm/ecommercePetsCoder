@@ -14,6 +14,7 @@ import RecuperarCuenta from './components/RecuperarCuenta'
 //Importar al Proveedor del contexto
 import { CartProvider } from './context/CartContext';
 import CartContainer from './components/CartContainer'
+import Checkout from './components/Checkout'
 
 function App() {
 
@@ -40,6 +41,8 @@ function App() {
         <Route path='/itemDetail/:id' element={<ItemDetailContainer/>}></Route>
 
         <Route path='/cart' element={<CartContainer/>}></Route>
+
+        <Route path='/checkout' element={<Checkout/>}></Route>
 
         <Route path='*' element={<Error/>}></Route>
         
