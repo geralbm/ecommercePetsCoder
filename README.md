@@ -21,10 +21,11 @@
 
 Si desea ver el proyecto online, se puede realizar ingresando al siguiente link: [app Publicada]()
 
-### Librerias Utilizadas
--[React Boostrap](https://react-bootstrap.netlify.app/): Para el styaling de la app.
--[React Icons](https://react-icons.github.io/react-icons/): Aplicación de Icónos en la app.
--[Firebase](https://console.firebase.google.com/): Utilizada para Base de datos.
--[React Router Dom](https://reactrouter.com/): Para realizar la navegación por rutas.
+
+### Librerias Utilizadas 📖
+- [React Boostrap](https://react-bootstrap.netlify.app/): Para el styaling de la app.
+- [React Icons](https://react-icons.github.io/react-icons/): Aplicación de Icónos en la app.
+- [Firebase](https://console.firebase.google.com/): Utilizada para Base de datos.
+- [React Router Dom](https://reactrouter.com/): Para realizar la navegación por rutas.
 
 *Desarrollado por: Geraldina Barrios.*

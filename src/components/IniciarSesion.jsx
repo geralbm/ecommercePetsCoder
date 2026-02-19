@@ -8,14 +8,9 @@ import Badge from 'react-bootstrap/Badge';
 const IniciarSesion = () => {
   const [usuario, setUsuario] = useState('')
 
-  //Funcion para esuchar el evento del formulario
-  // => la funcion recive el evento y este evento puede ser por partes.
+
 
   const usuarioHandler = (e) => {
-    //console.log (e, 'evento')
-    //console.log (e.target, 'el evento target en el input')
-   // console.log (e.target.value, 'el valor en si del evento')
-
     //Capturar el eventoy guardarlo en un estado => se guarda en usuario
     setUsuario (e.target.value)
   }

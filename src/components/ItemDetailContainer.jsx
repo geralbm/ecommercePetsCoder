@@ -32,16 +32,7 @@ const ItemDetailContainer = () => {
         .finally (() => setCargando(false))
     },[id])
 
-    //Promesa
-    // //Destructuring
-    // useEffect (() => {
-    //     getOneProduct(id)
-    //     .then ((res) => setDetail (res))
-    //     .catch((error) => console.log (error))
-    //     .finally (() => setCargando(false))
-    // },[id]) //el useEffect esta a la escucha del ID
-    // //console.log(detail)
-       
+
        //Avisar al usuario que ese producto no existe
        if (invalido){
         return (
