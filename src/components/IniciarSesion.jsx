@@ -11,7 +11,6 @@ const IniciarSesion = () => {
 
 
   const usuarioHandler = (e) => {
-    //Capturar el eventoy guardarlo en un estado => se guarda en usuario
     setUsuario (e.target.value)
   }
   return (

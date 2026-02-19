@@ -6,19 +6,35 @@ import Nav from 'react-bootstrap/Nav';
 import CardGroup from 'react-bootstrap/CardGroup';
 import ItemCount from './ItemCount';
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 
 const ItemDetail = ({detail}) => {
    const [purchase, setPurchase] = useState (false)
-   const {addItem, cart} = useContext (CartContex)
+   const {addItem, cart, itemQuantity} = useContext (CartContex)
     console.log (cart, 'cart')
     const onAdd = (cantidad) => {
       console.log(`Agregaste ${cantidad} unidades del producto ${detail.nombre}`)
       addItem (detail, cantidad)
       setPurchase (true)
+      Swal.fire ( 
+        {
+          position:'top-end',
+          icon:'success',
+          title: `Agregaste ${detail.nombre} al carrito 🛒👌`,
+          showCancelButton:false,
+          showConfirmButton:false,
+          timer:1500,
+           width: '300px',
+           padding:'1rem',
+           
+           
+
+        }
+      )
     }
 
-
+const stockActualizado = detail.stock - itemQuantity(detail.id)
   return (
     <div >
         
@@ -34,11 +50,12 @@ const ItemDetail = ({detail}) => {
           <p style={{color:'grey'}} bg="success" className="text-center"><strong>Acepta Cuotas:</strong>  {detail.pargoCuotas}</p>
           <p style={{color:'grey'}} bg="success" className="text-center"><strong>Envío Gratis:</strong>  {detail.envioGratis}</p>
           <p style={{color:'grey'}} bg="success" className="text-center"><strong>Acepta Descuento:</strong>  {detail.descuento}</p>
+          <p style={{color:'grey'}} bg="success" className="text-center"><strong>Stock:</strong>  {stockActualizado}</p>
           <p style={{color:'grey'}} bg="success" className="text-center"><strong>Color:</strong> {detail.color}</p>
           <p style={{color:'grey'}} bg="success" className="text-center"><strong>Tamaño:</strong>  {detail.tamaño}</p>
         </Card.Body>
         <Card.Footer style={{textAlign:'center'}} >
-         {purchase ? <Link className='btn btn-danger' to='/cart'>Continuar compra</Link> : <ItemCount stock={detail.stock} onAdd={onAdd}/>}
+         {purchase ? <Link className='btn btn-danger' to='/cart'>Continuar compra</Link> : <ItemCount stock={stockActualizado} onAdd={onAdd}/>}
         </Card.Footer>
       </Card>
     </CardGroup>

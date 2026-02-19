@@ -9,8 +9,6 @@ const Footer = () => {
                
             </ul>
 
-            
-
             <div className='copyR'>
                 <span>©️ </span>
                 <p> 2025 - Pets Love</p>

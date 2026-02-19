@@ -3,9 +3,24 @@ import Badge from 'react-bootstrap/Badge';
 import { CartContex } from '../context/CartContext';
 import { HiArchiveBoxXMark } from "react-icons/hi2";
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const CartView = () => {
     const {cart, removeItem, clear, total} = useContext(CartContex)
+    //Alerta de Confirmacion de vaciar el carrito
+    const preConfirm = () => {
+        Swal.fire({
+            icon:'question',
+            title:'¿Estas seguro de Vaciar el carrito completo? 🚨',
+            showDenyButton:true,
+            denyButtonText:'No',
+            confirmButtonText:'Si'
+        }).then ((resu)=> {
+            if (resu.isConfirmed){
+                clear ()
+            }
+        })
+    }
   return (
     <div>
         <h4 style={{padding:'1rem', width:'40rem'}} >
@@ -25,10 +40,10 @@ const CartView = () => {
             ))}
         </div>
        { /*Llamar y armar una funcion en contexto que devuelva un resultado de total a pagar */}
-        <span style={{margin:'2rem'}}>Total a pagar: ${total()},00</span>
+        <span style={{margin:'2rem', color:'brown',fontWeight:'bolder'}}>Total a pagar: ${total()},00</span>
 
         <div style={{padding:'1rem'}}>
-            <button className='btn btn-danger' style={{margin:'1rem'}} onClick={clear}>Vaciar Carrito</button>
+            <button className='btn btn-danger' style={{margin:'1rem'}} onClick={preConfirm}>Vaciar Carrito</button>
 
             <Link  style={{margin:'1rem'}}className='btn btn-success' to='/checkout'>Terminar Compra</Link>
            

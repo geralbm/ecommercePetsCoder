@@ -28,8 +28,6 @@ useEffect ( () => { // se ejecuta una vez y no se actualiza
     //2. Pedir los documentos
     getDocs(prodCollection)
     .then ((res) => {
-        console.log (res)
-       //console.log (res.docs)
         //Limpiar y ordenar los datos
         const list = res.docs.map((doc)=>{
             return {
@@ -47,29 +45,6 @@ useEffect ( () => { // se ejecuta una vez y no se actualiza
     .finally (() => setLoading(false))
     //escucha los tipos de categoria (type)
 },[type])
-
-
-//Promesa
-// useEffect ( () => { // se ejecuta una vez y no se actualiza
-//     //Prender el loading
-//     setLoading(true)
-//     //pedir datos 
-//     getProducts() // retorna una promesa
-//     .then ((res) => {
-//         if (type){
-//             //filtrar
-//             setData (res.filter((prod)=>prod.categoria === type))
-//         }else{
-//             setData(res) //No filtro, entonces se trabaja la promesa.
-//         }
-//     })//tratando la promesa y guardando las res en un estado que tiene un array vacio.
-//     .catch ((error) => console.log (error))
-//     //Finalizar el loading
-//     .finally (() => setLoading(false))
-// },[type])
-
-//console.log (data);
-
 
    return (
     <>

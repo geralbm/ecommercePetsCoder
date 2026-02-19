@@ -19,7 +19,7 @@
 
 ### Versión Host 💻
 
-Si desea ver el proyecto online, se puede realizar ingresando al siguiente link: [app Publicada]()
+Si desea ver el proyecto Online, se puede realizar ingresando al siguiente link: [app Publicada](https://ecommerce-pets-coder.vercel.app/)
 
 
 ### Librerias Utilizadas 📖
@@ -27,5 +27,7 @@ Si desea ver el proyecto online, se puede realizar ingresando al siguiente link:
 - [React Icons](https://react-icons.github.io/react-icons/): Aplicación de Icónos en la app.
 - [Firebase](https://console.firebase.google.com/): Utilizada para Base de datos.
 - [React Router Dom](https://reactrouter.com/): Para realizar la navegación por rutas.
+- [sweetalert2](https://sweetalert2.github.io/): Para aplicar alertas.
+
 
 *Desarrollado por: Geraldina Barrios.*

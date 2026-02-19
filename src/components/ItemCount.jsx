@@ -28,13 +28,19 @@ const ItemCount = ({stock,onAdd}) => {
     onAdd(counter)
  }
     return (
-        <div className="w-50 mx-auto bg-light p-3 d-flex justify-content-center align-items-center">
-            <Badge bg="danger"  onClick={restar}>-</Badge>
-            <Badge bg="secondary">{counter}</Badge>
-            <Badge bg="success" onClick={sumar}>+</Badge>
-            <Button  className= 'd-block mx-auto' variant="danger" onClick={comprar} disabled={counter === 0 || stock === 0 }><strong>Comprar</strong> 
-            </Button>
-        </div>
+        <>
+            {
+                stock > 0
+                ?  <div className="w-50 mx-auto bg-light p-3 d-flex justify-content-center align-items-center">
+                    <Badge bg="danger"  onClick={restar}>-</Badge>
+                    <Badge bg="secondary">{counter}</Badge>
+                    <Badge bg="success" onClick={sumar}>+</Badge>
+                    <Button  className= 'd-block mx-auto' variant="danger" onClick={comprar} disabled={counter === 0 || stock === 0 }><strong>Comprar</strong> 
+                    </Button>
+                    </div>
+                : <p style={{ color:'brown',fontWeight:'bolder'}} >❗❗❗Lo sentimos, no hay stock disponible. 🚨</p>
+            }
+        </>
         
         
     )

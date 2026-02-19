@@ -1,11 +1,19 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 //Crear contexto
 export const CartContex = createContext()
+//Persistencia del carrito.
+const carritoLocalS = JSON.parse(localStorage.getItem('carrito')) || []
 
 //Crear el proveedor
 export const CartProvider = ({children}) => {
-const [cart, setCart] = useState([])
+const [cart, setCart] = useState(carritoLocalS)
+
+
+useEffect (() => {
+ localStorage.setItem('carrito', JSON.stringify(cart))
+
+}, [cart])
 
     //Funciones (herramientas)
         //Agregar item al carrito => se usa en el componente itemDetail
@@ -58,8 +66,17 @@ const [cart, setCart] = useState([])
             return cart.reduce ((acu,prod) => acu += (prod.quantity),0)
         }
 
+        const itemQuantity = (id) => {
+            const itemInCart = cart.find((item) => item.id === id)
+            if (itemInCart){
+                return itemInCart.quantity
+            }else {
+                return 0
+            }
+        }
+
     return (
-        <CartContex.Provider value={{cart, addItem, removeItem, total, cartQuantity, clear}}>
+        <CartContex.Provider value={{cart, addItem, removeItem, total, cartQuantity, clear, itemQuantity}}>
             {children}
         </CartContex.Provider>
     )
